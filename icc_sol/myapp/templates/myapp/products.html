@@ -1,0 +1,43 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block title %}INDUSTRIAL CAD CAM SOLUTIONS{% endblock %}
+
+{% block content %}
+<div id="scene">
+    <div id="left-zone">
+        <ul class="list">
+            {% for key, value in datas.items %}
+                <li class="item">
+                    {% if key == "strawberry" %}
+                        <input type="radio" id="radio_{{ key }}" name="basic_carousel" value="{{ key }}" checked>
+                    {% else %}
+                        <input type="radio" id="radio_{{ key }}" name="basic_carousel" value="{{ key }}">
+                    {% endif %}
+
+                    <label for="radio_{{ key }}" class="label_{{ key }}">
+                        {{ key|capfirst }}
+                    </label>
+
+                    <div class="content content_{{ key }}">
+                        <span class="picto">
+                            {% if key == "strawberry" %}
+                                <img src="{% static 'images/picture1.jpg' %}" alt="Picture 1">
+                            {% elif key == "banana" %}
+                                <img src="{% static 'images/picture2.jpg' %}" alt="Picture 2">
+                            {% else %}
+                                <div class="picto" style="background-image: url({{ pictograms|get_item:key }});"></div>
+                            {% endif %}
+                        </span>
+                        <h1>{{ key|capfirst }}</h1>
+                        <p>{{ value }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="middle-border"></div>
+    <div id="right-zone"></div>
+</div>
+{% endblock %}

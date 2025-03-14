@@ -1,0 +1,434 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}INDUSTRIAL CAD CAM SOLUTIONS{% endblock %}
+
+{% block content %}
+
+
+<section class="relative">
+    {% comment %} <img src="{% static 'myapp/images/demo.png' %}" alt="Gurukrupa Engineering" class="w-full h-[500px] object-cover">{% static 'myapp/images/logo1.jpg' %} {% endcomment %}
+    <img src="{% static 'myapp/images/logo1.jpg' %}" alt="Gurukrupa Engineering" class="w-full h-[500px] object-cover">
+    <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-white shadow-lg p-6 text-center rounded-lg w-11/12 md:w-2/3 lg:w-1/2">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-500">INDUSTRIAL CAD CAM SOLUTIONS.</h2>
+        <p class="text-gray-600 mt-2 font-semibold">**I.C.C.S Engineering: Your Trusted Partner for Precision Protection Solutions**</p>
+        <p class="text-gray-500 mt-1">Welcome to I.C.C.S Engineering, where innovation meets reliability in the realm of machine tool protection covers and protective solutions.</p>
+        <a href="#" class="text-gray-500 font-semibold mt-2 inline-block">Read More</a>
+        <div class="mt-4 flex flex-col md:flex-row justify-center gap-4">
+            <a href="#" class="bg-gray-500 text-white font-bold py-2 px-6 rounded">VIEW PRODUCTS</a>
+            <a href="#" class="bg-gray-900 text-white font-bold py-2 px-6 rounded">SEND ENQUIRY</a>
+        </div>
+    </div>
+</section>
+<!-- Section 2: Products with Carousel -->
+<section class="container mx-auto my-10 px-4">
+    <h2 class="text-2xl font-bold text-center text-gray-800">
+        Our Products
+    </h2>
+    <div class="w-12 h-1 bg-gray-500 mx-auto mt-2"></div>
+
+    <div class="mt-8 flex justify-center gap-6 flex-wrap">
+        <!-- Product 1 -->
+        <div class="relative bg-white shadow-md rounded-lg p-4 text-center w-64 group">
+            <img src="{% static 'myapp/images/product2.jpg' %}" alt="Rollway Cover" class="mx-auto h-40 transition-transform duration-300 group-hover:scale-105">
+            <h3 class="font-semibold mt-4">Rollway Cover</h3>
+            <!-- Hover Button -->
+            <a href="product1.html" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button class="bg-gray-500 text-white font-semibold py-2 px-4 rounded shadow-md transition-colors duration-300 hover:bg-gray-700">
+                    View Product
+                </button>
+            </a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="relative bg-white shadow-md rounded-lg p-4 text-center w-64 group">
+            <img src="{% static 'myapp/images/product2.jpg' %}" alt="Steel Apron Cover" class="mx-auto h-40 transition-transform duration-300 group-hover:scale-105">
+            <h3 class="font-semibold mt-4">Steel Apron Cover</h3>
+            <!-- Hover Button -->
+            <a href="product2.html" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button class="bg-gray-500 text-white font-semibold py-2 px-4 rounded shadow-md transition-colors duration-300 hover:bg-gray-700">
+                    View Product
+                </button>
+            </a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="relative bg-white shadow-md rounded-lg p-4 text-center w-64 group">
+            <img src="{% static 'myapp/images/product2.jpg' %}" alt="Round Bellow Covers" class="mx-auto h-40 transition-transform duration-300 group-hover:scale-105">
+            <h3 class="font-semibold mt-4">Round Bellow Covers</h3>
+            <!-- Hover Button -->
+            <a href="product3.html" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button class="bg-gray-500 text-white font-semibold py-2 px-4 rounded shadow-md transition-colors duration-300 hover:bg-gray-700">
+                    View Product
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="text-center mt-6">
+        <a href="#" class="bg-gray-500 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:bg-gray-700 transition duration-300">
+            VIEW ALL PRODUCTS
+        </a>
+    </div>
+</section>
+
+
+
+<!-- Section 3: About -->
+<section class="bg-gray-100 py-10 flex items-center">
+    <div class="container mx-auto flex flex-wrap items-center">
+        <!-- Left Image Section -->
+        <div class="w-full md:w-1/2 px-4 flex justify-center">
+            <img src="{% static 'myapp/images/about.jpg' %}" alt="About" class="max-w-md shadow-lg rounded-lg">
+        </div>
+
+        <!-- Right Text Section -->
+        <div class="w-full md:w-1/2 px-6 text-left">
+            <h2 class="text-2xl font-bold text-gray-800">
+                ABOUT OUR <span class="text-gray-500">ORGANIZATION</span>
+            </h2>
+            <p class="mt-2 text-gray-600">
+                <strong>I.C.C.S Engineering: Your Trusted Partner for Precision Protection Solutions</strong>
+            </p>
+            <p class="mt-2 text-gray-600">
+                Welcome to I.C.C.S Engineering, where innovation meets reliability in the realm of machine tool protection covers and protective solutions. As a...
+            </p>
+            <a href="#" class="text-gray-500 font-semibold mt-2 inline-block hover:underline">
+                Read More
+            </a>
+            <div class="mt-6 flex flex-col items-center">
+                <!-- Industry Icon with Hover Effect -->
+                <div class="w-16 h-16 flex items-center justify-center rounded-full shadow-lg bg-white transition-all duration-500 ease-in-out hover:bg-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-10 h-10 fill-black transition-all duration-500 ease-in-out hover:fill-white">
+                        <path d="M3 3v18h18V3H3zm16 16H5V5h14v14zm-5-7h4v6h-4v-6zm-6 0h4v6H8v-6zm3-3h4v3h-4v-3zm-6 0h4v3H5v-3z"/>
+                    </svg>
+                </div>
+            
+                <!-- Number & Label -->
+                <div class="mt-2 text-center">
+                    <h3 class="text-3xl font-bold text-gray-800">59+</h3>
+                    <p class="text-gray-600">Products Available</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section 4: Gallery -->
+{% comment %} <section class="container mx-auto my-10 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800">Gallery</h2>
+
+    <div class="relative overflow-hidden mt-6">
+        <!-- Image Carousel -->
+        <div id="galleryContainer" class="flex space-x-6 overflow-x-scroll scrollbar-hide scroll-smooth snap-x">
+            <img src="{% static 'myapp/images/galary1.jpg' %}" alt="Gallery Image" 
+                class="h-40 md:h-52 lg:h-64 cursor-pointer transition duration-300 hover:scale-105 snap-start" 
+                onclick="openModal(this)">
+            <img src="{% static 'myapp/images/galary2.jpg' %}" alt="Gallery Image" 
+                class="h-40 md:h-52 lg:h-64 cursor-pointer transition duration-300 hover:scale-105 snap-start" 
+                onclick="openModal(this)">
+            <img src="{% static 'myapp/images/galary3.jpg' %}" alt="Gallery Image" 
+                class="h-40 md:h-52 lg:h-64 cursor-pointer transition duration-300 hover:scale-105 snap-start" 
+                onclick="openModal(this)">
+            <img src="{% static 'myapp/images/galary4.jpg' %}" alt="Gallery Image" 
+                class="h-40 md:h-52 lg:h-64 cursor-pointer transition duration-300 hover:scale-105 snap-start" 
+                onclick="openModal(this)">
+            <img src="{% static 'myapp/images/galary5.jpg' %}" alt="Gallery Image" 
+                class="h-40 md:h-52 lg:h-64 cursor-pointer transition duration-300 hover:scale-105 snap-start" 
+                onclick="openModal(this)">
+        </div>
+
+        <!-- Left Button -->
+        <button onclick="scrollGallery(-1)" 
+            class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 md:p-4 rounded-full shadow-md hover:bg-gray-700">
+            &#8592;
+        </button>
+
+        <!-- Right Button -->
+        <button onclick="scrollGallery(1)" 
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 md:p-4 rounded-full shadow-md hover:bg-gray-700">
+            &#8594;
+        </button>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden">
+        <span class="absolute top-5 right-5 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="max-w-full max-h-full rounded-lg shadow-lg">
+    </div>
+</section>
+
+<script>
+    function openModal(img) {
+        document.getElementById('modalImage').src = img.src;
+        document.getElementById('imageModal').classList.remove('hidden');
+    }
+    
+    function closeModal() {
+        document.getElementById('imageModal').classList.add('hidden');
+    }
+    
+    function scrollGallery(direction) {
+        let container = document.getElementById('galleryContainer');
+        let imageWidth = container.firstElementChild.clientWidth + 24; // Account for space-x-6
+        container.scrollBy({ left: imageWidth * direction, behavior: 'smooth' });
+    }
+</script> {% endcomment %}
+
+{% comment %} <section class="container mx-auto my-10 px-4 w-[70%]">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800">Gallery</h2>
+
+    <div class="relative mt-6">
+        <!-- Image Carousel -->
+        <div id="galleryContainer" class="flex items-center justify-center space-x-6 overflow-hidden scroll-smooth">
+            <img src="{% static 'myapp/images/galary1.jpg' %}" alt="Gallery Image" 
+                class="h-32 md:h-44 lg:h-52 cursor-pointer transition duration-300 scale-90 opacity-60 snap-start"
+                onclick="openModal(this)">
+            <img src="{% static 'myapp/images/galary2.jpg' %}" alt="Gallery Image" 
+                class="h-40 md:h-52 lg:h-64 cursor-pointer transition duration-300 scale-100 opacity-100 snap-center"
+                onclick="openModal(this)">
+            <img src="{% static 'myapp/images/galary3.jpg' %}" alt="Gallery Image" 
+                class="h-32 md:h-44 lg:h-52 cursor-pointer transition duration-300 scale-90 opacity-60 snap-start"
+                onclick="openModal(this)">
+        </div>
+
+        <!-- Left Button -->
+        <button onclick="scrollGallery(-1)" 
+            class="absolute left-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 md:p-4 rounded-full shadow-md hover:bg-gray-700">
+            &#8592;
+        </button>
+
+        <!-- Right Button -->
+        <button onclick="scrollGallery(1)" 
+            class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 md:p-4 rounded-full shadow-md hover:bg-gray-700">
+            &#8594;
+        </button>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden">
+        <span class="absolute top-5 right-5 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="max-w-full max-h-full rounded-lg shadow-lg">
+    </div>
+</section>
+
+<script>
+    function openModal(img) {
+        document.getElementById('modalImage').src = img.src;
+        document.getElementById('imageModal').classList.remove('hidden');
+    }
+    
+    function closeModal() {
+        document.getElementById('imageModal').classList.add('hidden');
+    }
+    
+    function scrollGallery(direction) {
+        let container = document.getElementById('galleryContainer');
+        let images = container.getElementsByTagName('img');
+        
+        if (direction === 1) {
+            container.append(images[0]); // Move first image to the end
+        } else {
+            container.prepend(images[images.length - 1]); // Move last image to the beginning
+        }
+    }
+</script> {% endcomment %}
+
+<section class="container mx-auto my-10 px-4 w-[70%]">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800">Gallery</h2>
+
+    <div class="relative mt-6 flex items-center justify-center">
+        <!-- Left Button -->
+        <button onclick="scrollGallery(-1)" 
+            class="absolute left-10 z-10 bg-gray-800 text-white p-3 md:p-4 rounded-full shadow-md hover:bg-gray-700 transition">
+            &#8592;
+        </button>
+
+        <!-- Image Carousel -->
+        <div id="galleryContainer" class="flex items-center justify-center overflow-hidden w-full relative">
+            <div class="flex transition-transform duration-500 ease-in-out space-x-6" id="imageTrack">
+                <img src="{% static 'myapp/images/galary1.jpg' %}" class="gallery-img small" onclick="openModal(this)">
+                <img src="{% static 'myapp/images/galary2.jpg' %}" class="gallery-img large" onclick="openModal(this)">
+                <img src="{% static 'myapp/images/galary3.jpg' %}" class="gallery-img small" onclick="openModal(this)">
+            </div>
+        </div>
+
+        <!-- Right Button -->
+        <button onclick="scrollGallery(1)" 
+            class="absolute right-10 z-10 bg-gray-800 text-white p-3 md:p-4 rounded-full shadow-md hover:bg-gray-700 transition">
+            &#8594;
+        </button>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden">
+        <span class="absolute top-5 right-5 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="max-w-full max-h-full rounded-lg shadow-lg">
+    </div>
+</section>
+
+<style>
+    .gallery-img {
+        transition: all 0.4s ease-in-out;
+        cursor: pointer;
+    }
+    .small {
+        height: 8rem;
+        opacity: 0.5;
+        transform: scale(0.85);
+    }
+    .large {
+        height: 10rem;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    @media (min-width: 768px) {
+        .small { height: 12rem; }
+        .large { height: 16rem; }
+    }
+
+    @media (min-width: 1024px) {
+        .small { height: 14rem; }
+        .large { height: 18rem; }
+    }
+</style>
+
+<script>
+    let images = [
+        "{% static 'myapp/images/galary1.jpg' %}",
+        "{% static 'myapp/images/galary2.jpg' %}",
+        "{% static 'myapp/images/galary3.jpg' %}",
+        "{% static 'myapp/images/galary4.jpg' %}",
+        "{% static 'myapp/images/galary5.jpg' %}"
+    ];
+
+    let currentIndex = 1; // Center image index
+
+    function updateGallery() {
+        let container = document.getElementById('imageTrack');
+        container.innerHTML = `
+            <img src="${images[(currentIndex - 1 + images.length) % images.length]}" class="gallery-img small" onclick="openModal(this)">
+            <img src="${images[currentIndex]}" class="gallery-img large" onclick="openModal(this)">
+            <img src="${images[(currentIndex + 1) % images.length]}" class="gallery-img small" onclick="openModal(this)">
+        `;
+    }
+
+    function scrollGallery(direction) {
+        currentIndex = (currentIndex + direction + images.length) % images.length;
+        updateGallery();
+    }
+
+    function openModal(img) {
+        document.getElementById('modalImage').src = img.src;
+        document.getElementById('imageModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+        document.getElementById('imageModal').classList.add('hidden');
+    }
+
+    // Initial render
+    updateGallery();
+</script>
+
+
+
+
+<!-- JavaScript for Scrolling and Modal -->
+<script>
+    function scrollGallery(direction) {
+        const container = document.getElementById("galleryContainer");
+        const scrollAmount = 300; // Adjust as needed
+        container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+    }
+
+    function openModal(image) {
+        document.getElementById("modalImage").src = image.src;
+        document.getElementById("imageModal").classList.remove("hidden");
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").classList.add("hidden");
+    }
+</script>
+
+
+<!-- Section 5: Request Callback -->
+<section class="container mx-auto my-10 px-4 flex items-center">
+    <div class="w-1/2">
+        <h2 class="text-2xl font-bold text-gray-800">Request A Call Back</h2>
+    </div>
+    <form class="w-1/2 bg-gray-100 p-6 rounded-lg shadow-md" action="mailto:raiashish523@gmail.com" method="POST">
+        <input type="text" placeholder="Your Email or Contact Number" class="w-full p-3 mb-4 border border-gray-300 rounded">
+        <textarea placeholder="Type your requirement in detail." class="w-full p-3 mb-4 border border-gray-300 rounded"></textarea>
+        <button type="submit" class="bg-gray-500 text-white py-2 px-6 rounded w-full">Send Message</button>
+    </form>
+</section>
+
+<!-- Section 6: Customer Logos -->
+<section class="container mx-auto my-10 px-4 text-center">
+    <h2 class="text-2xl font-bold text-gray-800">Our Customers</h2>
+
+    <div class="relative overflow-hidden mt-6">
+        <!-- Auto-Scrolling Slider -->
+        <div class="slider">
+            <div class="slide-track">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" class="logo" alt="Customer Logo">
+
+                <!-- Duplicate for smooth infinite scroll -->
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" class="logo" alt="Customer Logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" class="logo" alt="Customer Logo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Slider Styling */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+/* Scroll Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Half of the duplicated track */
+}
+
+.slide-track {
+    display: flex;
+    width: 200%; /* Double width for infinite loop */
+    animation: scroll 20s linear infinite;
+}
+
+/* Customer Logos */
+.logo {
+    height: 100px;
+    width: 150px;
+    object-fit: contain;
+    margin: 0 20px; /* Equal spacing */
+}
+
+/* Pause on Hover */
+.slider:hover .slide-track {
+    animation-play-state: paused;
+}
+</style>
+
+
+{% endblock %}

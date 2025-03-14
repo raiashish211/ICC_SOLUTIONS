@@ -1,0 +1,161 @@
+{% comment %} {% extends 'myapp/base.html' %}
+
+{% block title %}Item List{% endblock %}
+
+{% block content %}
+<h1 class="text-2xl font-bold">Items</h1>
+<ul class="mt-4">
+    {% for item in items %}
+        <li class="border p-2 my-2">
+            <h2 class="font-semibold">{{ item.name }}</h2>
+            <p>{{ item.description }}</p>
+            <!-- Display image if available -->
+            {% if item.image %}
+                <img src="{{ item.image.url }}" alt="{{ item.name }}" class="w-32 h-32 object-cover">
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %} {% endcomment %}
+{% comment %} code of item_list.html {% endcomment %}
+
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>{% block title %}My Site{% endblock %}</title>
+</head>
+<body class="bg-gray-100">
+    <header>
+        <nav class="bg-blue-500 p-4">
+            <div class="container mx-auto">
+                <a href="{% url 'item_list' %}" class="text-white">Home</a>
+                <!-- Add more links as needed -->
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto my-4">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="bg-blue-500 p-4 text-center text-white">
+        <p>&copy; 2023 My Site</p>
+    </footer>
+</body>
+</html> {% endcomment %}
+{% comment %} code of base.html {% endcomment %}
+
+
+<header class="w-full">
+    <!-- Top Yellow Bar -->
+    <div class="bg-yellow-400 py-2 px-4 flex justify-between items-center">
+        <div class="text-black text-sm"></div> <!-- Empty div for spacing -->
+        <div class="text-black text-sm flex items-center space-x-4">
+            <span>📍 Delhi</span>
+            <span>📞 08048032684</span>
+            <span>✉️ gurukrupaengg77@gmail.com</span>
+        </div>
+    </div>
+
+    <!-- Logo & Navigation -->
+    <nav class="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+        <!-- Logo on Left -->
+        <div>
+            <img src="{% static 'myapp/images/logo1.jpg' %}" alt="Logo" class="h-14">
+        </div>
+
+        <!-- Navigation Menu on Right -->
+        <ul class="flex space-x-6">
+            <li><a href="#" class="text-black font-medium">Home</a></li>
+
+            {% comment %} <!-- About with Dropdown -->
+            <li class="relative group">
+                <a href="#" class="text-black font-medium">About ⌄</a>
+                <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg hidden group-hover:block">
+                    <li><a href="#" class="block px-4 py-2 text-black hover:bg-gray-200">Our Story</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-black hover:bg-gray-200">Team</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-black hover:bg-gray-200">Mission</a></li>
+                </ul>
+            </li> {% endcomment %}
+            
+
+            <li><a href="{% url 'item_list' %}" class="text-black font-medium">Products</a></li>
+            <li><a href="#" class="text-black font-medium">Latest News</a></li>
+            <li><a href="#" class="text-black font-medium">Gallery</a></li>
+            <li><a href="#" class="text-black font-medium">Brochure</a></li>
+            <li><a href="#" class="text-black font-medium">More</a></li>
+            <li><a href="#" class="text-black font-medium">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+
+<!-- Hero Section -->
+<section class="text-center bg-gray-200 py-10">
+    <h1 class="text-3xl font-bold text-gray-800">INDUSTRIAL CAD CAM SOLUTIONS PVT LTD.</h1>
+    <p class="text-gray-600 mt-2 px-4 md:w-2/3 mx-auto">
+        "Your Trusted Partner for Precision Protection Solutions."
+    </p>
+    <div class="mt-6">
+        <a href="#" class="bg-yellow-500 text-white py-2 px-6 rounded">View Products</a>
+        <a href="#" class="bg-gray-700 text-white py-2 px-6 rounded">Send Enquiry</a>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="container mx-auto my-10 px-4">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Our Products</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Product 1 -->
+        <div class="bg-white shadow-lg rounded-lg p-4 text-center">
+            <img src="{% static 'myapp/images/demo.png' %}" alt="Railway Cover" class="mx-auto h-40">
+            <h3 class="font-semibold mt-4">Railway Cover</h3>
+        </div>
+        <!-- Product 2 -->
+        <div class="bg-white shadow-lg rounded-lg p-4 text-center">
+            <img src="{% static 'myapp/images/demo.png' %}" alt="Steel Apron Cover" class="mx-auto h-40">
+            <h3 class="font-semibold mt-4">Steel Apron Cover</h3>
+        </div>
+        <!-- Product 3 -->
+        <div class="bg-white shadow-lg rounded-lg p-4 text-center">
+            <img src="{% static 'myapp/images/demo.png' %}" alt="Round Bellows Cover" class="mx-auto h-40">
+            <h3 class="font-semibold mt-4">Round Bellows Cover</h3>
+        </div>
+    </div>
+    <div class="text-center mt-6">
+        <a href="#" class="bg-yellow-500 text-white py-2 px-6 rounded">View All Products</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="bg-gray-200 py-10">
+    <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-bold text-gray-800">About Our Organization</h2>
+        <p class="text-gray-600 mt-2 px-4 md:w-2/3 mx-auto">
+            "Innovation meets reliability in machine tool protection covers and solutions."
+        </p>
+        <div class="mt-4">
+            <a href="#" class="text-yellow-500 font-bold">Read More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="container mx-auto my-10 px-4">
+    <h2 class="text-2xl font-bold text-center text-gray-800">Request A Call Back</h2>
+    <form class="bg-gray-100 p-6 mt-6 rounded-lg shadow-md mx-auto md:w-1/2">
+        <input type="text" placeholder="Your Email or Contact Number" class="w-full p-3 mb-4 border border-gray-300 rounded">
+        <textarea placeholder="Type your requirement in detail." class="w-full p-3 mb-4 border border-gray-300 rounded"></textarea>
+        <button type="submit" class="bg-yellow-500 text-white py-2 px-6 rounded w-full">Send Message</button>
+    </form>
+</section>
+
+
